@@ -2,7 +2,7 @@ require 'spec_helper'
 
 feature 'Tasks' do
   scenario 'Can see the tasks for a user' do
-    pending
+    pending "Do me first"
     bob = User.create!(name: "Bob Smith")
 
     Task.create!(user_id: bob.id, description: "Run 10 miles")
@@ -19,7 +19,7 @@ feature 'Tasks' do
   end
 
   scenario 'Can see the user associated with a task' do
-    pending
+    pending "Do me second"
     bob = User.create!(name: "Bob Smith")
 
     task = Task.create!(user_id: bob.id, description: "Run 10 miles")
@@ -32,7 +32,7 @@ feature 'Tasks' do
   end
 
   scenario 'Can see the attachment associated with a task' do
-    pending
+    pending "Do me third"
 
     bob = User.create!(name: "Bob Smith")
     task = Task.create!(user_id: bob.id, description: "Run 10 miles")

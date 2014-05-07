@@ -16,7 +16,8 @@ Rails views.
 ## Assignment
 
 Your assignment is to remove the pending from the specs
-one by one until you get all of the specs passing.
+one by one until you get all of the specs passing. The order you
+should remove the pendings is noted in the specs.
 
 To get the specs passing, you will need to add various ActiveRecord
 association declarations to the different classes in the models
