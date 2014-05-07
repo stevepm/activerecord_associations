@@ -23,6 +23,8 @@ ActiveRecord::Schema.define(version: 20140507170507) do
     t.datetime "updated_at"
   end
 
+  add_index "tasks", ["user_id"], name: "index_tasks_on_user_id", using: :btree
+
   create_table "users", force: true do |t|
     t.string   "name"
     t.datetime "created_at"

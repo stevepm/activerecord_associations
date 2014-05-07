@@ -17,4 +17,17 @@ feature 'Tasks' do
       expect(page).to have_content "Finish gSchool Homework"
     end
   end
+
+  scenario 'Can see the user associated with a task' do
+    pending
+    bob = User.create!(name: "Bob Smith")
+
+    task = Task.create!(user_id: bob.id, description: "Run 10 miles")
+
+    visit task_path(task)
+
+    within(".user-name") do
+      expect(page).to have_content "Bob Smith"
+    end
+  end
 end
