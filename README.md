@@ -21,4 +21,5 @@ should remove the pendings is noted in the specs.
 
 To get the specs passing, you will need to add various ActiveRecord
 association declarations to the different classes in the models
-directory.
+directory. Your best source of details is the [ActiveRecord guide for
+associations](http://guides.rubyonrails.org/association_basics.html).

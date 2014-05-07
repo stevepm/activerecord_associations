@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140507173741) do
+ActiveRecord::Schema.define(version: 20140507175911) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,29 @@ ActiveRecord::Schema.define(version: 20140507173741) do
   end
 
   add_index "attachments", ["task_id"], name: "index_attachments_on_task_id", using: :btree
+
+  create_table "conference_rooms", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "meetings", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "reservations", force: true do |t|
+    t.integer  "conference_room_id"
+    t.integer  "meeting_id"
+    t.date     "starts_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "reservations", ["conference_room_id"], name: "index_reservations_on_conference_room_id", using: :btree
+  add_index "reservations", ["meeting_id"], name: "index_reservations_on_meeting_id", using: :btree
 
   create_table "tasks", force: true do |t|
     t.integer  "user_id"
