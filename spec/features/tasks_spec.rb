@@ -18,28 +18,18 @@ feature 'Tasks' do
     end
   end
 
-  scenario 'Can see the user associated with a task' do
+  scenario 'Can see the user and attachment associated with a task' do
     pending "Do me second"
     bob = User.create!(name: "Bob Smith")
 
     task = Task.create!(user_id: bob.id, description: "Run 10 miles")
+    Attachment.create!(task_id: task.id, name: 'My super cool attachment')
 
     visit task_path(task)
 
     within(".user-name") do
       expect(page).to have_content "Bob Smith"
     end
-  end
-
-  scenario 'Can see the attachment associated with a task' do
-    pending "Do me third"
-
-    bob = User.create!(name: "Bob Smith")
-    task = Task.create!(user_id: bob.id, description: "Run 10 miles")
-
-    Attachment.create!(task_id: task.id, name: 'My super cool attachment')
-
-    visit task_path(task)
 
     within(".attachment-name") do
       expect(page).to have_content "My super cool attachment"
