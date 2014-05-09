@@ -15,7 +15,7 @@ Rails views.
 
 ## Assignment
 
-Your assignment is to remove the pending from the specs
+Start by removing the pending from the specs
 one by one until you get all of the specs passing. The order you
 should approach the specs is noted in the specs.
 
@@ -32,5 +32,7 @@ parts that go into associations:
 1. How to create objects in the database for use in test scenarios so you don't
 have to create them via the interface.
 
-Your final assignment is to fully implement a new application from a failing test suite.
+For the solution to this homework, you can look at the `solutions` branch in the repo.
+
+Your next assignment is to fully implement a new application from a failing test suite.
 See https://github.com/gSchool/activerecord_associations_from_scratch for details.
