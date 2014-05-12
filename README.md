@@ -24,13 +24,17 @@ association declarations to the different classes in the models
 directory. Your best source of details is the [ActiveRecord guide for
 associations](http://guides.rubyonrails.org/association_basics.html).
 
-Once you have completed this, use the Git history (`git log` and `git show` or )
-to begin to understand the other moving
-parts that go into associations:
+All of the other moving parts have been implemented for you outside of
+adding ActiveRecord associations to the various models.
 
-1. What foreign key columns have to be added to create the associations in the database?
+Once you have completed this, use the source code provided (migrations, tests,
+views) to begin to understand the other moving parts that go into associations:
+
+1. What foreign key columns have to be added to create the associations in the database? (migrations)
+1. How do I create indexes on the foreign key columns? (migrations)
 1. How to create objects in the database for use in test scenarios so you don't
-have to create them via the interface.
+have to create them via the interface. (specs)
+1. How to access associations (views)
 
 For the solution to this homework, you can look at the `solutions` branch in the repo.
 
